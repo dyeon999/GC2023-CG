@@ -1,0 +1,38 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <script id="vertex-shader" type="x-shader/x-vertex"> 
+            attribute vec2 vPosition;
+            uniform vec2 uResolution;
+
+            void main(){
+                vec2 zeroToOne = vPosition / uResolution;
+                vec2 zeroToTwo = zeroToOne * 2.0;
+                vec2 clipSpace = zeroToTwo - 1.0;
+
+                gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
+            }
+        </script>
+        
+        <script id="fragment-shader" type="x-shader/x-fragment"> 
+            precision mediump float;
+            uniform vec4 uColor;
+
+            void main(){
+                gl_FragColor = uColor;
+            }
+        </script>
+        <script type="text/javascript" src="../Common/webgl-utils.js"></script> 
+        <script type="text/javascript" src="../Common/InitShaders.js"></script> 
+        <script type="text/javascript" src="../Common/MV.js"></script>
+        <script type="text/javascript" src="randomSquare.js"></script>
+    </head>
+    <body>
+        <p>ID : 202035309 Name : 김도연</p>
+
+        <canvas id="gl-canvas" width="500" height="500">
+            Oops ... your browser doesn't support the HTML5 canvas element 
+        </canvas>
+    </body>
+</html>

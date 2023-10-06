@@ -25,10 +25,6 @@ window.onload = function init(){
     var program = initShaders( gl, "vertex-shader", "fragment-shader" );
     gl.useProgram( program ); 
 
-    // offset
-    var uOffset = gl.getUniformLocation(program, "uOffset");
-    gl.uniform4fv(uOffset, [1,0,0,0]);
-
     // Load the data into the GPU 
 
     var bufferId = gl.createBuffer();
@@ -43,9 +39,13 @@ window.onload = function init(){
     gl.vertexAttribPointer( vPosition, 2, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vPosition ); 
 
+    // offset
+    var uOffset = gl.getUniformLocation(program, "uOffset");
+    gl.uniform4fv(uOffset, [1,0,0,0]);
+
     // uniform cariable
 
-    var uColor = gl.getUniformLocation(program, "uColor");
+    //var uColor = gl.getUniformLocation(program, "uColor");
 
     render();
 };

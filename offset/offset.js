@@ -41,11 +41,12 @@ window.onload = function init(){
 
     // offset
     var uOffset = gl.getUniformLocation(program, "uOffset");
-    gl.uniform4fv(uOffset, [1,0,0,0]);
+    gl.uniform4fv(uOffset, [0.3,0,0,0]);
 
     // uniform cariable
 
-    //var uColor = gl.getUniformLocation(program, "uColor");
+    // var uColor = gl.getUniformLocation(program, "uColor");
+    // gl.uniform4fv(uColor,[0,0,1,0]); 
 
     render();
 };

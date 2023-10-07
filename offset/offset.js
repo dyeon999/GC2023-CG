@@ -45,8 +45,8 @@ window.onload = function init(){
 
     // uniform cariable
 
-    // var uColor = gl.getUniformLocation(program, "uColor");
-    // gl.uniform4fv(uColor,[0,0,1,0]); 
+    var uColor = gl.getUniformLocation(program, "uColor");
+    gl.uniform4fv(uColor,[0,0,1,0]); 
 
     render();
 };

@@ -169,7 +169,7 @@ var grassVertices = [
     gl.bufferData(gl.ARRAY_BUFFER, flatten(starColors), gl.STATIC_DRAW);
 
     gl.disableVertexAttribArray(vColor);
-    gl.vertexAttrib4f(vColor,1.0,1.0,0.,1.0);
+    gl.vertexAttrib4f(vColor,1.0,1.0,0.0,1.0);
 
     gl.uniform1i(uUseUniform, useUniform);
     gl.uniform1f(uScale, 0.06);

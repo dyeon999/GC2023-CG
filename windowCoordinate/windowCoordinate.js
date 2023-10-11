@@ -18,7 +18,7 @@ window.onload = function init(){
         10, 20,
         190, 20,
         100, 200
-    ]
+    ];
 
 
     var colors = [

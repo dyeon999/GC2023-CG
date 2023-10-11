@@ -22,7 +22,7 @@ window.onload = function init() {
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
 
-    gl.enable(gl.DEPTH_TEST);
+    gl.enable(gl.DEPTH_TEST); //////////////////// 얘가 짱중요해 ////////////////////////
 
     // Load shaders and initialize attribute buffers
 
